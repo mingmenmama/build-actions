@@ -41,7 +41,7 @@ on:
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
         required: true
-        default: '8370C'
+        default: '默认'
         type: choice
         options:
           - '默认'
@@ -51,12 +51,12 @@ on:
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
-        default: 'Telegram'
+        default: '关闭'
         type: choice
         options:
           - '关闭'
           - 'Telegram'
-          - 'pushplus'
+          - 'Pushplus'
       SSH_ACTION:
         description: 'SSH远程配置固件'
         required: false
@@ -70,7 +70,7 @@ on:
       UPLOAD_RELEASE:
         description: '发布固件到 Github Releases'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
       CACHEWRTBUILD_SWITCH:
         description: '缓存加速编译'
@@ -234,7 +234,7 @@ jobs:
       uses: ophub/delete-releases-workflows@main
       with:
         delete_releases: true
-        releases_keep_keyword: targz
+        releases_keep_keyword: targz/Update
         releases_keep_latest: ${{ env.KEEP_LATEST }}
         delete_tags: true
         delete_workflows: false
