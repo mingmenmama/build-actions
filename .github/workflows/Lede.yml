@@ -41,7 +41,7 @@ on:
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
         required: true
-        default: '8370C'
+        default: '默认'
         type: choice
         options:
           - '默认'
@@ -51,7 +51,7 @@ on:
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
-        default: 'Telegram'
+        default: '关闭'
         type: choice
         options:
           - '关闭'
@@ -70,7 +70,7 @@ on:
       UPLOAD_RELEASE:
         description: '发布固件到 Github Releases'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
       CACHEWRTBUILD_SWITCH:
         description: '缓存加速编译'
